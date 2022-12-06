@@ -151,7 +151,7 @@ for (let i = 0; i < reversed.length; i++){
 const finalString = lastLetters.join('')
 console.log(finalString)
 
-//now the crane can pick up multiple.. 
+//now the crane can pick up multiple..
 
 function bigOperation (tuple){
     let moves = Number(tuple[0])
