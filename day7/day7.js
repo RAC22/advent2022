@@ -130,17 +130,17 @@ for (let i = 0; i < input.length; i++) {
 let dirs = {};
 
 // Get sizes of directories
-const crawl = (dir = "", branch = tree.view) => {
+function traverse (dir = "", branch = tree.view) {
 	let size = 0;
 	for (let [k, v] of Object.entries(branch)) {
 		if (!isNaN(v)) size += v;
-		else size += crawl(`${dir}/${k}`, branch[k]);
+		else size += traverse(`${dir}/${k}`, branch[k]);
 	}
 	dirs[dir ? dir : "/"] = size;
 	return size;
 };
 
-crawl();
+traverse();
 
 dirs = Object.fromEntries(Object.entries(dirs).sort((a, b) => a[1] - b[1]));
 
