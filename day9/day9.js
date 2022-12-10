@@ -1,5 +1,3 @@
-const { dir } = require("console")
-
 let input = require("fs").readFileSync(`./day9.txt`, "utf-8").split("\n")
 input = input.map(e=>{return e.replace('\r', '')})
 
