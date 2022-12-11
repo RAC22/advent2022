@@ -26,7 +26,7 @@ function executeProg (commandList) {
         let cmd = split[0]
         let arg = parseInt(split[1])
         if(register == cycles+offset || register+1 == cycles+offset || register-1 == cycles+offset){
-            crtLine += String.fromCodePoint(0x02A8)
+            crtLine += '▓'
         }else{
             crtLine += ' '
         }
